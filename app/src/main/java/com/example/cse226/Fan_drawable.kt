@@ -14,6 +14,9 @@ class Fan_drawable : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fan_drawable)
 
+
+        customViewFan = CustomViewFan(this)
+        setContentView(customViewFan)
         val cb = findViewById<Button>(R.id.clear)
         customViewFan = findViewById<View>(R.id.cd) as CustomViewFan
 

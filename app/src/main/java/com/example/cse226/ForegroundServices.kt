@@ -26,7 +26,7 @@ class ForegroundServices : AppCompatActivity() {
                 updateTextStatus()
             }, 100)
         }
-//        updateTextStatus()
+        updateTextStatus()
     }
 
     private fun updateTextStatus() {

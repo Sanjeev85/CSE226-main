@@ -45,7 +45,6 @@ class adapterRecycler(
 
         //bind every holder item using bind function and itemClickListener
         holder.bind(arrayList[position], itemClickListener)
-
     }
 
     class MyHolder(view: View) : RecyclerView.ViewHolder(view) {

@@ -13,13 +13,13 @@ import android.widget.Toast
 
 open class BatteryReceiverExample : AppCompatActivity() {
     lateinit var batteryReceiver: chargerLevelReceiver
-    lateinit var wifi: TextView
-    lateinit var wifiManager: WifiManager
+//    lateinit var wifi: TextView
+//    lateinit var wifiManager: WifiManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_broadcast_receiver)
-//        val level = findViewById<TextView>(R.id.level)
-        wifi = findViewById<TextView>(R.id.level)
+        val level = findViewById<TextView>(R.id.level)
+//        wifi = findViewById<TextView>(R.id.level)
 //        batteryReceiver = chargerLevelReceiver(level, this)
 //        registerReceiver(batteryReceiver, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
 //        wifiManager = applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
@@ -32,7 +32,7 @@ open class BatteryReceiverExample : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        unregisterReceiver(batteryReceiver)
+//        unregisterReceiver(batteryReceiver)
     }
 
 

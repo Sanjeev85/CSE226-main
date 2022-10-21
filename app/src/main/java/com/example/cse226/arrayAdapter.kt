@@ -13,9 +13,9 @@ import androidx.annotation.LayoutRes
 class arrayAdapter(
     var mCtx: Context,
     @LayoutRes private val layoutResource: Int,
-    var grid_list: ArrayList<gridItem>
+    var grid_list: ArrayList<listItem>
 ) :
-    ArrayAdapter<gridItem>(mCtx, layoutResource, grid_list) {
+    ArrayAdapter<listItem>(mCtx, layoutResource, grid_list) {
     override fun getItemId(position: Int): Long {
         return super.getItemId(position)
     }
@@ -24,7 +24,7 @@ class arrayAdapter(
         return super.getCount()
     }
 
-    override fun getItem(position: Int): gridItem? {
+    override fun getItem(position: Int): listItem? {
         return super.getItem(position)
     }
 
@@ -32,13 +32,13 @@ class arrayAdapter(
         Log.e("Hello", "Inside getView arrayAdapter")
         val layoutInflater: LayoutInflater = LayoutInflater.from(mCtx)
         val view: View = layoutInflater.inflate(layoutResource, null)
-        val img = view?.findViewById<ImageView>(R.id.img_view)
-        val text_view = view?.findViewById<TextView>(R.id.text_view)
+        val img = view?.findViewById<ImageView>(R.id.facebook_img)
+        val version_name = view?.findViewById<TextView>(R.id.version_name)
 
         val item = grid_list.get(position)
 
-        img?.setImageResource(item.img!!)
-        text_view?.text = item.text!!
+        img?.setImageResource(item.image_resource!!)
+        version_name?.text = item.versionName!!
 
         return view
     }

@@ -29,6 +29,5 @@ class NewService : Service() {
 
     override fun onBind(intent: Intent): IBinder? {
         return null
-//        TODO("Return the communication channel to the service.")
     }
 }
